@@ -1,0 +1,18 @@
+
+
+version: '3'
+
+services:
+  xgboost-model-api:
+    image: xgboost-model-api
+    ports:
+      - "5000:5000"
+    deploy:
+      mode: global
+    networks:
+      - xgboost-net
+
+
+
+networks:
+    xgboost-net:
